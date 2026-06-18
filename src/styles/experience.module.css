@@ -1,0 +1,260 @@
+.experience {
+  min-height: fit-content;
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.experienceHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+.experienceHeader p {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  opacity: 0.88;
+}
+
+.experienceHeader h1 {
+  font-size: clamp(2.6rem, 4vw, 4.2rem);
+  font-family: var(--primaryFont);
+  line-height: 1;
+}
+
+.experienceBody {
+  display: grid;
+  grid-template-columns: 32% 68%;
+  align-items: start;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.experienceImage {
+  box-sizing: border-box;
+  padding: 1rem 1rem 0 0;
+  position: sticky;
+  top: 5rem;
+  pointer-events: none;
+}
+
+.experienceImage > img {
+  width: 100%;
+  pointer-events: none;
+}
+
+.experienceTimeline {
+  position: relative;
+  padding-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.timelineRail {
+  position: absolute;
+  left: 0.85rem;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+.timelineProgress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #1d9bf0, #f5c16c);
+  box-shadow: 0 0 28px rgba(29, 155, 240, 0.35);
+}
+
+.experienceCard {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  width: 100%;
+  min-height: 132px;
+  padding: 1.4rem 1.5rem 1.4rem 1.2rem;
+  border-radius: 22px;
+  margin-bottom: 0.3rem;
+  border: 1px solid rgba(255, 214, 153, 0.1);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: transform 0.55s ease, opacity 0.55s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.experienceCardVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.experienceCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 214, 153, 0.35);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.24);
+}
+
+.timelineDot {
+  position: absolute;
+  left: -2.05rem;
+  top: 1.35rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 3px solid #0f0c41;
+  box-shadow: 0 0 0 6px rgba(29, 155, 240, 0.12);
+  z-index: 2;
+}
+
+.expcardImg {
+  border-radius: 50%;
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background:
+    radial-gradient(circle at 30% 28%, rgba(255, 255, 255, 0.28), transparent 38%),
+    linear-gradient(145deg, rgba(255, 214, 153, 0.18), rgba(29, 155, 240, 0.12) 52%, rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(245, 193, 108, 0.34);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 10px 24px rgba(0, 0, 0, 0.2),
+    0 0 28px rgba(245, 193, 108, 0.12);
+  overflow: hidden;
+}
+
+.expcardImg > img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  object-fit: cover;
+  transform: scale(1.08);
+}
+
+.experienceDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.experienceDetails > h6 {
+  font-family: var(--primaryFont);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+  letter-spacing: 0.04em;
+}
+
+.experienceDetails > h4 {
+  font-family: var(--primaryFont);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.experienceDetails > h5 {
+  font-family: var(--primaryFont);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  word-break: break-word;
+}
+
+@media screen and (max-width: 992px) {
+  .experience {
+    min-height: 100%;
+    padding-top: 2rem;
+  }
+
+  .experienceBody {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .experienceImage {
+    position: relative;
+    top: 0;
+    max-width: 420px;
+    justify-self: center;
+    padding: 0;
+  }
+
+  .experienceTimeline {
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .experienceHeader {
+    margin-bottom: 1.75rem;
+  }
+
+  .experienceTimeline {
+    padding-left: 1.75rem;
+  }
+
+  .experienceCard {
+    padding: 1.1rem 1rem 1.1rem 0.95rem;
+    min-height: 118px;
+    gap: 0.85rem;
+  }
+
+  .timelineDot {
+    left: -1.75rem;
+    top: 1.15rem;
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+  .expcardImg {
+    width: 56px;
+    height: 56px;
+  }
+
+  .expcardImg > img {
+    transform: scale(1.02);
+  }
+
+  .experienceDetails > h4 {
+    font-size: 1.05rem;
+  }
+
+  .experienceDetails > h5 {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .experienceHeader h1 {
+    font-size: 2.4rem;
+  }
+
+  .experienceTimeline {
+    padding-left: 1.5rem;
+  }
+
+  .timelineRail {
+    left: 0.6rem;
+  }
+
+  .timelineDot {
+    left: -1.45rem;
+  }
+}

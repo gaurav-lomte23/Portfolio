@@ -1,0 +1,119 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: fit-content;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+.blogHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem;
+  text-align: center;
+}
+
+.blogHeader h1 {
+  margin-bottom: 12px;
+  font-size: 2.5rem;
+  font-family: var(--primaryFont);
+}
+
+.blogEyebrow {
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.blogSubtext {
+  max-width: 640px;
+  margin-bottom: 28px;
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.blogBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blogBodyContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2.5rem;
+}
+
+.blogViewAll {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.blogViewAll a button {
+  outline: none;
+  border: none;
+  width: 150px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: inherit;
+  border-radius: 45px;
+  font-size: 1.05rem;
+  font-family: var(--primaryFont);
+  font-weight: 500;
+  padding-left: 1.5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  .blogBodyContainer {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .blogHeader h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  .blogSubtext {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blogHeader h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  .blogViewAll {
+    position: relative;
+    margin-top: 2.5rem;
+  }
+  .blogViewAll a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

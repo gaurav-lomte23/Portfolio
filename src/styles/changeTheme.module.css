@@ -1,0 +1,39 @@
+.changeTheme {
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  z-index: 999;
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  background: rgba(240, 193, 90, 0.14);
+  border: 1px solid rgba(240, 193, 90, 0.35);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(12px);
+  color: #f0c15a;
+  z-index: 999;
+}
+
+.changeTheme button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  padding: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .changeTheme {
+    right: 10px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+  }
+}

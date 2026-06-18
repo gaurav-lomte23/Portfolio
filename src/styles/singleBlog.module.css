@@ -1,0 +1,189 @@
+.singleBlog {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  border-radius: 18px;
+  overflow: hidden;
+  transform-origin: center center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 24%),
+    radial-gradient(circle at 85% 10%, rgba(255, 214, 153, 0.08), transparent 18%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+  transition:
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.singleBlog::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.18), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 28%),
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.08), transparent 30%);
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.singleBlog::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 17px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.06), rgba(255, 196, 92, 0.18));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.singleBlog:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 32px 90px rgba(0, 0, 0, 0.34),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.singleBlogImage {
+  position: relative;
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.singleBlogImage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(6, 8, 28, 0.06), rgba(6, 8, 28, 0.24)),
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.18), transparent 30%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.singleBlogImage::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.singleBlogImage > img {
+  display: block;
+}
+
+.singleBlogImageImg {
+  object-fit: cover;
+  transition: transform 1.05s cubic-bezier(0.16, 1, 0.3, 1), filter 1.2s ease;
+  filter: saturate(0.92) contrast(1.02) blur(0.6px);
+  transform: scale(1.16);
+}
+
+.singleBlog:hover > .singleBlogImage .singleBlogImageImg {
+  filter: saturate(1.08) contrast(1.06) blur(0);
+  transform: scale(1.08);
+}
+
+.singleBlogBody {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  width: 100%;
+  padding: 1rem 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.singleBlogBody p {
+  font-family: var(--primaryFont);
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.singleBlogBody h3 {
+  font-family: var(--primaryFont);
+  margin-bottom: 0.65rem;
+  font-size: 19px;
+  line-height: 115%;
+  letter-spacing: -0.02em;
+}
+
+.singleBlogBody h6 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 15px;
+  line-height: 139%;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+@media (min-width: 992px) and (max-width: 1380px) {
+  .singleBlog {
+    height: 410px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .singleBlog {
+    max-width: 420px;
+    height: 430px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .singleBlog {
+    height: 450px;
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .singleBlog {
+    height: 450px;
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .singleBlog {
+    height: 440px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .singleBlogImageImg {
+    filter: saturate(1) contrast(1.02);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .singleBlog {
+    transform: scale(0.9);
+  }
+}
