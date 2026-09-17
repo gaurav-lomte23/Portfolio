@@ -1,22 +1,30 @@
 export const experienceData = [
     {
         id: 1,
-        company: 'OrcaPulse',
-        jobtitle: 'Founding Developer',
-        startYear: 'Jan 2026',
+        company: 'Infonyx Solutions',
+        jobtitle: 'Delivery Head - Technology Solutions',
+        startYear: 'Aug 2026',
         endYear: 'Present',
-        link: 'https://www.orcapulse.ai/'
+        link: 'https://infonyxsolutions.com/'
     },
     {
         id: 2,
-        company: 'Webeye Digital Marketing',
-        jobtitle: 'Project Lead Developer',
-        startYear: 'Oct 2025',
-        endYear: 'Present',
-        link: 'https://webeye.tech/'
+        company: 'OrcaPulse',
+        jobtitle: 'Founding Developer',
+        startYear: 'Jan 2026',
+        endYear: 'Jul 2026',
+        link: 'https://www.orcapulse.ai/'
     },
     {
         id: 3,
+        company: 'Webeye Digital Marketing',
+        jobtitle: 'Project Lead Developer',
+        startYear: 'Oct 2025',
+        endYear: 'Jul 2026',
+        link: 'https://webeye.tech/'
+    },
+    {
+        id: 4,
         company: 'Wellness-Wise',
         jobtitle: 'Software Engineer Intern',
         startYear: 'Nov 2024',
@@ -24,7 +32,7 @@ export const experienceData = [
         link: 'https://wellness-wise.com'
     },
     {
-        id: 4,
+        id: 5,
         company: 'UnifiedMentor Online',
         jobtitle: 'Full Stack Engineer Intern',
         startYear: 'Sep 2024',
@@ -32,7 +40,7 @@ export const experienceData = [
         link: 'https://unifiedmentor.com'
     },
     {
-        id: 5,
+        id: 6,
         company: 'CodSoft Pvt. Ltd.',
         jobtitle: 'Software Engineer Intern',
         startYear: 'Oct 2022',

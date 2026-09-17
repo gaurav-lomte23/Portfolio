@@ -53,13 +53,22 @@ function SingleProject({ id, name, desc, demo, image, theme }) {
                     <div className={styles.projectArtwork}>
                         <div className={styles.projectArtworkRing} />
                         <div className={styles.projectArtworkGlow} />
-                        <Image
-                            src={image ? image : placeholder}
-                            alt={name}
-                            className={styles.projectImage}
-                            sizes="(max-width: 600px) 100vw, (max-width: 992px) 50vw, 33vw"
-                            quality={65}
-                        />
+                        {typeof image === 'string' ? (
+                            <img
+                                src={image}
+                                alt={name}
+                                className={styles.projectImage}
+                                loading="lazy"
+                            />
+                        ) : (
+                            <Image
+                                src={image ? image : placeholder}
+                                alt={name}
+                                className={styles.projectImage}
+                                sizes="(max-width: 600px) 100vw, (max-width: 992px) 50vw, 33vw"
+                                quality={65}
+                            />
+                        )}
                         <div className={styles.projectHoverOverlay} aria-hidden="true">
                             <div
                                 className={styles.projectHoverCard}
@@ -137,3 +146,4 @@ function SingleProject({ id, name, desc, demo, image, theme }) {
 }
 
 export default SingleProject;
+

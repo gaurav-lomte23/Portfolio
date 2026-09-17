@@ -8,5 +8,5 @@ export const socialsData = {
     website: 'https://www.orcapulse.ai/',
     medium: '',
     stackOverflow: '',
-    mail: 'gauravlomte23@gmail.com',
+    mail: 'gauravlomte2326@gmail.com',
 }
